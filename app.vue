@@ -47,3 +47,13 @@
 								type="text"
 								name="wallet"
 								id="wallet"
+								placeholder="Например DOGE"
+								class="input-danger w-full block pr-10 border-gray-300 text-gray-900 focus:outline-none focus:ring-gray-500 focus:border-gray-500 sm:text-sm rounded"
+							/>
+							<svg
+								v-show="searchTickerIsAlreadyInUse"
+								width="528px"
+								height="528px"
+								viewBox="0 -8 528 528"
+								xmlns="http://www.w3.org/2000/svg"
+								style="
