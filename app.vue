@@ -31,3 +31,19 @@
 			<section>
 				<div class="flex px-4">
 					<div class="max-w-full">
+						<label for="wallet" class="block text-sm font-medium text-gray-900"
+							>Тикер</label
+						>
+						<div
+							style="z-index: 1"
+							class="p-1 mt-1 relative rounded-md shadow-md bg-gray-300"
+						>
+							<input
+								v-model="searchTicker"
+								ref="searchTickerInput"
+								@keydown.enter="addTicker(searchTicker)"
+								@focus="searchHintsShowed = true"
+								@blur="if (!searchHintsInDemand) searchHintsShowed = false;"
+								type="text"
+								name="wallet"
+								id="wallet"
