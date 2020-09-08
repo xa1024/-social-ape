@@ -78,3 +78,17 @@
 								@mouseover="searchHintsInDemand = true"
 								@mouseleave="searchHintsInDemand = false"
 								style="
+									width: fit-content;
+									border-radius: 0 0 0.375rem 0.375rem;
+									justify-content: center;
+									margin-top: -0.2rem;
+								"
+								class="w-auto mx-2 p-1 rounded-md shadow-md bg-purple-300"
+							>
+								<span
+									v-for="h in searchHints"
+									:key="h"
+									@click="searchHintClick(h)"
+									class="inline-flex items-center px-2 m-1 rounded text-xs font-medium bg-purple-500 text-white cursor-pointer hover:bg-purple-600"
+								>
+									{{ h }}
