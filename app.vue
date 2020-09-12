@@ -124,3 +124,15 @@
 				<div
 					:class="{ 'pb-8': this.tickers.length <= 6 }"
 					class="bg-gray-100 px-4"
+				>
+					<div class="filter flex content-center">
+						<div
+							style="border-radius: 0.375rem 0 0 0.375rem"
+							class="relative p-2 rounded-md shadow-md bg-gray-200"
+						>
+							<svg
+								class="w-4 h-4"
+								version="1.1"
+								id="Capa_1"
+								xmlns="http://www.w3.org/2000/svg"
+								xmlns:xlink="http://www.w3.org/1999/xlink"
