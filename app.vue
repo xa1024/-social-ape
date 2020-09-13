@@ -152,3 +152,17 @@
 							</svg>
 						</div>
 						<input
+							v-model="tickersFilter"
+							style="border-radius: 0 0.375rem 0.375rem 0"
+							class="h-8 border-l-2 border-gray-300 rounded-md shadow-md bg-gray-300"
+							type="text"
+						/>
+					</div>
+
+					<div v-if="this.tickers.length > 6" class="pagination flex p-2 gap-2">
+						<button
+							:disabled="this.tickersPage <= 1"
+							@click="this.tickersPage = this.tickersPage - 1"
+							class="border border-transparent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
+						>
+							<svg
