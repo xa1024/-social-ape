@@ -185,3 +185,21 @@
 			s168.424,75.55,168.424,168.424S285.359,361.282,192.485,361.282z"
 										/>
 										<path
+											d="M235.878,99.876c-4.704-4.74-12.319-4.74-17.011,0l-83.009,84.2c-4.572,4.62-4.584,12.56,0,17.191l82.997,84.2
+			c4.704,4.74,12.319,4.74,17.011,0c4.704-4.752,4.704-12.439,0-17.191l-74.528-75.61l74.54-75.61
+			C240.57,112.315,240.57,104.628,235.878,99.876z"
+										/>
+									</g>
+								</g>
+							</svg>
+						</button>
+						<span class="text-xl"
+							>{{ this.tickersPage }}/{{ this.tickers.length / 6 }}</span
+						>
+						<button
+							:disabled="!tickersHasNextPage"
+							@click="this.tickersPage = this.tickersPage + 1"
+							class="border border-transparent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
+						>
+							<svg
+								class="w-6 h-6"
