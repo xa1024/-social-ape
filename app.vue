@@ -166,3 +166,22 @@
 							class="border border-transparent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
 						>
 							<svg
+								class="w-6 h-6"
+								version="1.1"
+								id="Capa_1"
+								xmlns="http://www.w3.org/2000/svg"
+								xmlns:xlink="http://www.w3.org/1999/xlink"
+								x="0px"
+								y="0px"
+								viewBox="0 0 384.97 384.97"
+								style="enable-background: new 0 0 384.97 384.97"
+								xml:space="preserve"
+							>
+								<g>
+									<g id="Chevron_Left_Circle">
+										<path
+											d="M192.485,0C86.185,0,0,86.185,0,192.485C0,298.797,86.173,384.97,192.485,384.97S384.97,298.797,384.97,192.485
+			C384.97,86.185,298.797,0,192.485,0z M192.485,361.282c-92.874,0-168.424-75.923-168.424-168.797S99.611,24.061,192.485,24.061
+			s168.424,75.55,168.424,168.424S285.359,361.282,192.485,361.282z"
+										/>
+										<path
