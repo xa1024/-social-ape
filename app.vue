@@ -236,3 +236,17 @@
 				<dl class="pb-8 grid grid-cols-1 gap-5 bg-gray-100 sm:grid-cols-3 px-4">
 					<div
 						v-for="t in paginatedTickers"
+						:key="t.name"
+						@click="selectTicker(t)"
+						:class="{
+							'border-4': selectedTickerName === t.name,
+						}"
+						class="flex flex-col justify-between bg-white overflow-hidden shadow rounded-lg border-purple-800 border-solid cursor-pointer"
+					>
+						<div class="px-4 py-5 sm:p-6 text-center">
+							<dt class="text-sm font-medium text-gray-500 truncate">
+								{{ t.name }} - USD
+							</dt>
+							<dd class="mt-1 text-3xl font-semibold text-gray-900">
+								{{ t.value }}
+							</dd>
