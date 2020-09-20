@@ -203,3 +203,19 @@
 						>
 							<svg
 								class="w-6 h-6"
+								version="1.1"
+								id="Ebene_1"
+								xmlns="http://www.w3.org/2000/svg"
+								xmlns:xlink="http://www.w3.org/1999/xlink"
+								x="0px"
+								y="0px"
+								width="64px"
+								height="64px"
+								viewBox="0 0 64 64"
+								enable-background="new 0 0 64 64"
+								xml:space="preserve"
+							>
+								<g>
+									<path
+										d="M28.373,13.546c-0.803-0.758-2.068-0.722-2.827,0.081c-0.758,0.803-0.722,2.069,0.081,2.827L42.087,32l-16.46,15.546
+		c-0.803,0.758-0.839,2.024-0.081,2.827C25.939,50.79,26.469,51,27,51c0.493,0,0.986-0.181,1.373-0.546l18-17
