@@ -285,3 +285,19 @@
 				</h3>
 				<div
 					@mousewheel="scaleGraph"
+					:alt="this.graphScale"
+					style="cursor: w-resize"
+					class="overflow-hidden flex flex-row-reverse border-gray-600 border-b border-r h-64"
+				>
+					<div
+						v-for="(bar, index) in normalizedGraph"
+						:key="index"
+						style="cursor: pointer"
+						class="h-full flex items-end"
+					>
+						<div
+							:title="`${bar.price}$\n${bar.time}`"
+							:style="{
+								height: `${bar.height}% `,
+								width: `${this.graphScale}rem`,
+							}"
