@@ -270,3 +270,18 @@
 									></path></svg
 								>Удалить
 							</button>
+						</div>
+					</div>
+				</dl>
+				<hr class="w-full border-t border-gray-600 pt-8" />
+			</template>
+
+			<section v-show="selectedTickerName !== null" class="relative mx-4">
+				<h3 class="text-lg leading-6 font-medium text-gray-900 mt-8 px-4">
+					{{ this.selectedTickerName }} - USD
+				</h3>
+				<h3 class="bold text-lg leading-3 font-light text-gray-900 mb-8 px-4">
+					{{ this.graph[0]?.value }}
+				</h3>
+				<div
+					@mousewheel="scaleGraph"
