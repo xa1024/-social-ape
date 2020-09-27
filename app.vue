@@ -360,3 +360,20 @@
 	// 10.🦆 | Магические строки и числа (URL, ключ LocalStorage, пагинация) |[]
 
 	// import tickerList from "./components/ticker-list.vue";
+
+	export default {
+		name: "App",
+		// components: { tickerList },
+		data() {
+			return {
+				contentIsLoaded: false,
+				coinList: [],
+				fetchDataUpdateTime: 60000,
+				searchTicker: "",
+				searchTickerIsAlreadyInUse: false,
+				searchHintsShowed: false,
+				searchHintsInDemand: false,
+				searchHints: ["BTC", "ETH", "LTC", "BCH"],
+				searchHintsDefault: [
+					{ name: "BTC", show: true },
+					{ name: "ETH", show: true },
