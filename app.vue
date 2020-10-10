@@ -388,3 +388,22 @@
 				graphScale: 2.25,
 				graphIsScaling: false,
 			};
+		},
+
+		created() {
+			const route = useRoute;
+			const windowData = Object.fromEntries(new route.params.meta.entries());
+			console.log(windowData);
+			if (windowData.filter) this.tickersFilter = windowData.filter;
+			if (windowData.page) this.tickersPage = Number(windowData.page);
+
+			const tickersData = localStorage.getItem("cryptonomicon-list");
+			if (tickersData) {
+				this.tickers = JSON.parse(tickersData);
+				this.tickers.forEach((t) => this.subscribeToFetchData(t.name));
+			}
+
+			this.searchHintsDefault
+				.filter((h) => this.tickers.some((t) => t.name === h.name))
+				.forEach((h) => (h.show = false));
+			(async () => {
