@@ -407,3 +407,16 @@
 				.filter((h) => this.tickers.some((t) => t.name === h.name))
 				.forEach((h) => (h.show = false));
 			(async () => {
+				const promise = await fetch(
+					"https://min-api.cryptocompare.com/data/all/coinlist?summary=true"
+				);
+				const data = await promise.json();
+				this.coinList = Object.keys(data.Data);
+			})();
+		},
+
+		mounted() {
+			this.contentIsLoaded = true;
+		},
+
+		watch: {
