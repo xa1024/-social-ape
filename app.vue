@@ -377,3 +377,14 @@
 				searchHintsDefault: [
 					{ name: "BTC", show: true },
 					{ name: "ETH", show: true },
+					{ name: "LTC", show: true },
+					{ name: "BCH", show: true },
+				],
+				tickers: [], // { name: "", value: [] }
+				tickersFilter: "",
+				tickersPage: 1,
+				selectedTickerName: null, // ""
+				graph: [],
+				graphScale: 2.25,
+				graphIsScaling: false,
+			};
