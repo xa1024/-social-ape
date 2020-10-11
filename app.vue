@@ -436,3 +436,19 @@
 
 			selectedTickerName() {
 				this.graph = [];
+				this.graphScale = 2.25;
+			},
+
+			paginatedTickers(newValue) {
+				if (newValue.length === 0 && this.tickersPage > 1) {
+					this.tickersPage -= 1;
+				}
+			},
+
+			tickersFilter(newValue) {
+				this.tickersPage = 1;
+				this.tickersFilter = newValue.toUpperCase().trim();
+			},
+
+			pageStateOptions(newValue) {
+				const route = useRote();
