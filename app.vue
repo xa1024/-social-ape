@@ -452,3 +452,9 @@
 
 			pageStateOptions(newValue) {
 				const route = useRote();
+				history.pushState(
+					null,
+					document.title,
+					`${route.params.path}?filter=${newValue.filter}&page=${newValue.page}`
+				);
+			},
