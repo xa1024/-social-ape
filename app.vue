@@ -420,3 +420,19 @@
 		},
 
 		watch: {
+			searchHintsDefault: {
+				handler(newValue) {
+					// Note: `newValue` will be equal to `oldValue` here
+					// on nested mutations as long as the object itself
+					// hasn't been replaced.
+					if (this.searchTicker === "") {
+						this.searchHints = newValue
+							.filter((h) => h.show)
+							.map((h) => h.name);
+					}
+				},
+				deep: true,
+			},
+
+			selectedTickerName() {
+				this.graph = [];
