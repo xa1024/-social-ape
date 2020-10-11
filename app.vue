@@ -458,3 +458,14 @@
 					`${route.params.path}?filter=${newValue.filter}&page=${newValue.page}`
 				);
 			},
+
+			tickers(newValue) {
+				this.searchTickerIsAlreadyInUse = newValue.some(
+					(t) => t.name === this.searchTicker
+				);
+			},
+
+			searchTicker(newValue) {
+				this.searchTicker = newValue.toUpperCase().trim();
+				this.searchTickerIsAlreadyInUse = this.tickers.some(
+					(t) => t.name === newValue
