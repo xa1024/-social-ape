@@ -469,3 +469,16 @@
 				this.searchTicker = newValue.toUpperCase().trim();
 				this.searchTickerIsAlreadyInUse = this.tickers.some(
 					(t) => t.name === newValue
+				)
+					? true
+					: false;
+				let searchHints;
+				if (newValue !== "") {
+					this.searchHintsShowed = true;
+					searchHints = this.coinList
+						.filter(
+							(c) =>
+								c.slice(0, this.searchTicker.length) === this.searchTicker &&
+								(this.tickers.every((t) => t.name !== c) || this.tickers === [])
+						)
+						.sort();
