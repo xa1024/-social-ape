@@ -482,3 +482,18 @@
 								(this.tickers.every((t) => t.name !== c) || this.tickers === [])
 						)
 						.sort();
+				} else
+					searchHints = this.searchHintsDefault
+						.filter((h) => h.show)
+						.map((h) => h.name);
+
+				this.searchHints = searchHints.slice(0, 4);
+			},
+		},
+
+		computed: {
+			pageStateOptions() {
+				return { filter: this.tickersFilter, page: this.tickersPage };
+			},
+
+			paginationIndexStart() {
