@@ -497,3 +497,18 @@
 			},
 
 			paginationIndexStart() {
+				return (this.tickersPage - 1) * 6;
+			},
+
+			paginationIndexEnd() {
+				return this.tickersPage * 6;
+			},
+
+			filteredTickers() {
+				return this.tickers.filter((t) => t.name.includes(this.tickersFilter));
+			},
+
+			paginatedTickers() {
+				return this.filteredTickers.slice(
+					this.paginationIndexStart,
+					this.paginationIndexEnd
