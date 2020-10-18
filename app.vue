@@ -536,3 +536,16 @@
 					else
 						return {
 							height: 50,
+							price: price.value,
+							time: price.time,
+						};
+				});
+			},
+		},
+
+		methods: {
+			searchHintClick(hint) {
+				this.$refs.searchTickerInput.focus();
+				this.searchTicker = hint;
+				if (hint === this.searchTicker) this.addTicker(hint);
+			},
