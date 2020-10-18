@@ -512,3 +512,14 @@
 				return this.filteredTickers.slice(
 					this.paginationIndexStart,
 					this.paginationIndexEnd
+				);
+			},
+
+			tickersHasNextPage() {
+				return this.filteredTickers.length > this.paginationIndexEnd;
+			},
+
+			normalizedGraph() {
+				let prices = [];
+				for (const p of this.graph) prices.push(p.value);
+				const maxValue = Math.max.apply(null, prices);
