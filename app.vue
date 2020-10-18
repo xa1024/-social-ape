@@ -523,3 +523,16 @@
 				let prices = [];
 				for (const p of this.graph) prices.push(p.value);
 				const maxValue = Math.max.apply(null, prices);
+				const minValue = Math.min.apply(null, prices);
+
+				return this.graph.map((price) => {
+					if (maxValue !== minValue)
+						return {
+							height:
+								5 + ((price.value - minValue) * 95) / (maxValue - minValue),
+							price: price.value,
+							time: price.time,
+						};
+					else
+						return {
+							height: 50,
