@@ -549,3 +549,20 @@
 				this.searchTicker = hint;
 				if (hint === this.searchTicker) this.addTicker(hint);
 			},
+
+			subscribeToFetchData(tickerName) {
+				setInterval(async () => {
+					const promise = await fetch(
+						`https://min-api.cryptocompare.com/data/price?fsym=${tickerName}&tsyms=USD&api_key=d646375d1bdb55ba2a2c3fda4b9058b1426d863b0e303a373060891421744b63`
+					);
+
+					const data = await promise.json(),
+						price =
+							data.USD > 1 ? data.USD.toFixed(2) : data.USD.toPrecision(2);
+					const time = new Date();
+					this.tickers.find((t) => t.name === tickerName).value = price;
+					if (this.selectedTickerName === tickerName) {
+						this.graph.unshift({
+							time: time.toTimeString().slice(0, 5),
+							value: price,
+						});
