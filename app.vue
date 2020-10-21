@@ -566,3 +566,20 @@
 							time: time.toTimeString().slice(0, 5),
 							value: price,
 						});
+					}
+				}, this.fetchDataUpdateTime);
+			},
+			addTicker(name) {
+				if (
+					!this.searchTickerIsAlreadyInUse &&
+					this.coinList.includes(this.searchTicker)
+				) {
+					if (
+						this.searchHintsDefault
+							.map((h) => h.name)
+							.some((h) => this.searchHints.includes(h))
+					)
+						this.searchHintsDefault.find((h) => h.name === name).show = false;
+					const ticker = {
+						name: name,
+						value: "-",
