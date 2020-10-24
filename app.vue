@@ -583,3 +583,16 @@
 					const ticker = {
 						name: name,
 						value: "-",
+					};
+					this.tickers.unshift(ticker);
+					this.tickersFilter = "";
+					this.tickersPage = 1;
+
+					localStorage.setItem(
+						"cryptonomicon-list",
+						JSON.stringify(this.tickers)
+					);
+					this.subscribeToFetchData(ticker.name);
+					this.selectedTickerName = ticker.name;
+					this.graph = [];
+					this.searchTicker = "";
