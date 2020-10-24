@@ -615,3 +615,13 @@
 					"cryptonomicon-list",
 					JSON.stringify(this.tickers)
 				);
+			},
+
+			scaleGraph(event) {
+				this.graphIsScaling = true;
+
+				setTimeout(() => {
+					this.graphIsScaling = false;
+				}, 300);
+
+				event.preventDefault();
