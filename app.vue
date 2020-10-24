@@ -596,3 +596,22 @@
 					this.selectedTickerName = ticker.name;
 					this.graph = [];
 					this.searchTicker = "";
+				} else this.searchTicker = this.searchHints[0];
+			},
+
+			selectTicker(ticker = null) {
+				if (ticker !== null && ticker?.name !== this.selectedTickerName)
+					this.selectedTickerName = ticker.name;
+				else this.selectedTickerName = null;
+			},
+
+			removeTicker(ticker) {
+				this.tickers = this.tickers.filter((t) => t !== ticker);
+				this.selectedTickerName = null;
+				this.graph = [];
+				// if (this.searchHintsDefault.some((h) => h.name === ticker.name))
+				//   this.searchHintsDefault.find((h) => h.name === ticker.name).show = true;
+				localStorage.removeItem(
+					"cryptonomicon-list",
+					JSON.stringify(this.tickers)
+				);
