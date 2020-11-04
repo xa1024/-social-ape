@@ -643,3 +643,14 @@
 	}
 
 	.pagination button:hover {
+		filter: unset;
+	}
+
+	.pagination button:disabled {
+		filter: invert(88%) sepia(2%) saturate(5139%) hue-rotate(185deg)
+			brightness(83%) contrast(78%);
+	}
+
+	.slide-enter-active,
+	.slide-leave-active {
+		transition: transform 250ms ease;
