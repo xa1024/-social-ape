@@ -625,3 +625,21 @@
 				}, 300);
 
 				event.preventDefault();
+				if (this.graphScale < 4 && event.deltaY === -125) {
+					this.graphScale = this.graphScale + 0.25;
+				}
+				if (this.graphScale > 0.75 && event.deltaY === 125) {
+					this.graphScale = this.graphScale - 0.25;
+				}
+			},
+		},
+	};
+</script>
+
+<style>
+	.pagination button {
+		filter: invert(20%) sepia(11%) saturate(1303%) hue-rotate(179deg)
+			brightness(91%) contrast(93%);
+	}
+
+	.pagination button:hover {
