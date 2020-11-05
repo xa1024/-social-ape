@@ -654,3 +654,14 @@
 	.slide-enter-active,
 	.slide-leave-active {
 		transition: transform 250ms ease;
+	}
+
+	.slide-enter-from,
+	.slide-leave-to {
+		transform: translateY(-100%);
+		box-shadow: 0px 0px 0px solid black;
+	}
+
+	.fade-enter-active,
+	.fade-leave-active {
+		transition: opacity 500ms ease;
