@@ -665,3 +665,20 @@
 	.fade-enter-active,
 	.fade-leave-active {
 		transition: opacity 500ms ease;
+	}
+
+	.fade-enter-from,
+	.fade-leave-to {
+		opacity: 0;
+	}
+
+	.input-danger::after {
+		content: "!";
+	}
+
+	.shake {
+		animation: 0.7s shake;
+	}
+
+	@keyframes shake {
+		10%,
