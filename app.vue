@@ -682,3 +682,20 @@
 
 	@keyframes shake {
 		10%,
+		100% {
+			transform: translate3d(-1px, 0, 0);
+		}
+
+		25%,
+		85% {
+			transform: translate3d(2px, 0, 0);
+		}
+
+		40%,
+		70% {
+			transform: translate3d(-3px, 0, 0);
+		}
+
+		55% {
+			transform: translate3d(3px, 0, 0);
+		}
