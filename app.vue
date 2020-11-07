@@ -699,3 +699,5 @@
 		55% {
 			transform: translate3d(3px, 0, 0);
 		}
+	}
+</style>
