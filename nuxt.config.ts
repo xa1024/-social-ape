@@ -1,1 +1,1 @@
-// https://nuxt.com/docs/api/
+// https://nuxt.com/docs/api/configuration/n
