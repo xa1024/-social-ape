@@ -3,4 +3,4 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss'],
   postcss: {
     plugins: {
-      tai
+      tailwindcss: {},
