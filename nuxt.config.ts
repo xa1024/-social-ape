@@ -8,3 +8,4 @@ export default defineNuxtConfig({
     },
   },
   typescript: {
+    shim: f
